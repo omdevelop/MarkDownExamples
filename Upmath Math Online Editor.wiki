@@ -1,0 +1,79 @@
+= Upmath: Math Online Editor =
+
+=== ''Create web articles and blog posts with equations and diagrams'' ===
+
+Upmath extremely simplifies this task by using Markdown and LaTeX. It converts the Markdown syntax extended with LaTeX equations support into HTML code you can publish anywhere on the web.
+
+[[File:E:\Development\Development_Arduino\Development_Arduino_ESP32\_Document\_MarkDownExamples\image\latex.jpg|thumb|none]]
+
+== Markdown ==
+
+Definition from [https://en.wikipedia.org/wiki/Markdown Wikipedia]:
+
+<blockquote>Markdown is a lightweight markup language with plain text formatting syntax designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+</blockquote>
+The main idea of Markdown is to use a simple plain text markup. It's <s>hard</s> easy to '''make''' '''bold''' ''or'' ''italic'' text. Simple equations can be formatted with subscripts and superscripts: ''E''~0~=''mc''^2^. I have added the LaTeX support: <math display="inline">E_0=mc^2</math>.
+
+Among Markdown features are:
+
+* images (see above);
+* links: [[|service main page]];
+* code: <code>untouched equation source is *E*~0~=*mc*^2^</code>;
+* unordered lists--when a line starts with <code>+</code>, <code>-</code>, or <code>*</code>;
+*# sub-lists
+*# and ordered lists too;
+* direct use <nobr>of HTML</nobr>–for <span style="color: red">anything else</span>. 
+
+Also the editor supports typographic replacements: (c) (r) (tm) (p) +- !!!!!! ???? ,, -- ---
+
+== LaTeX ==
+
+The editor converts LaTeX equations in double-dollars <code>$$</code>: <math display="inline">ax^2+bx+c=0</math>. All equations are rendered as block equations. If you need inline ones, you can add the prefix <code>\inline</code>: <math display="inline">\inline p={1\over q}</math>. But it is a good practice to place big equations on separate lines:
+
+<math display="inline">x_{1,2} = {-b\pm\sqrt{b^2 - 4ac} \over 2a}.</math>
+
+In this case the LaTeX syntax will be highlighted in the source code. You can even add equation numbers (unfortunately there is no automatic numbering and refs support):
+
+<math display="inline">|\vec{A}|=\sqrt{A_x^2 + A_y^2 + A_z^2}.</math>(1)
+
+It is possible to write Cyrillic symbols in <code>\text</code> command: <math display="inline">Q_\text{плавления}>0</math>.
+
+One can use matrices:
+
+<math display="inline">T^{\mu\nu}=\begin{pmatrix}
+\varepsilon&0&0&0\\
+0&\varepsilon/3&0&0\\
+0&0&\varepsilon/3&0\\
+0&0&0&\varepsilon/3
+\end{pmatrix},</math>
+
+integrals:
+
+<math display="inline">P_\omega={n_\omega\over 2}\hbar\omega\,{1+R\over 1-v^2}\int\limits_{-1}^{1}dx\,(x-v)|x-v|,</math>
+
+cool tikz-pictures:
+
+[[File:E:\Development\Development_Arduino\Development_Arduino_ESP32\_Document\_MarkDownExamples\image\Graph.png|thumb|none]]
+
+plots:
+
+[[File:E:\Development\Development_Arduino\Development_Arduino_ESP32\_Document\_MarkDownExamples\image\Plot.png|thumb|none]]
+
+and [https://en.wikibooks.org/wiki/LaTeX/Mathematics the rest of LaTeX features].
+
+== About Upmath ==
+
+It works in browsers, except equations rendered [[/tex.s2cms.com/|on the server]]. The editor stores your text in the browser to prevent the loss of your work in case of software or hardware failures.
+
+I have designed and developed this lightweight editor and the service for converting LaTeX equations into svg-pictures to make publishing math texts on the web easy. I consider client-side rendering, the rival technique implemented in [https://www.mathjax.org/ MathJax], to be too limited and resource-consuming, especially on mobile devices.
+
+The source code is [https://github.com/parpalak/upmath.me published on Github] under MIT license.
+
+
+-----
+
+Now you can erase this instruction and start writing your own scientific post. If you want to see the instruction again, open the editor in a private tab, in a different browser or download and clear your post and refresh the page.
+
+Have a nice day :)
+
+[https://written.ru/ Roman Parpalak], web developer and UX expert.
