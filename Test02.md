@@ -307,17 +307,20 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 $$\sum_{k=1}^n ht_k$$
 
+$$\begin{align} 
+     \dot{x} & = \sigma(y-x) \\
+     \dot{y} & = \rho x - y - xz \\
+     \dot{z} & = -\beta z + xy
+    \end{align}$$
 
-
-$$\begin{align}
-\dot{x} & = \sigma(y-x) \\
-\dot{y} & = \rho x - y - xz \\
-\dot{z} & = -\beta z + xy
-\end{align}$$
-
-$$T^{\mu\nu}=\begin{pmatrix}
+$$ T^{\mu\nu}=\begin{pmatrix}
 \varepsilon&0&0&0\\
 0&\varepsilon/3&0&0\\
 0&0&\varepsilon/3&0\\
 0&0&0&\varepsilon/3
-\end{pmatrix},$$
+\end{pmatrix}, $$
+
+
+
+
+
